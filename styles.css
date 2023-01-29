@@ -24,12 +24,13 @@ body {
     background-size: cover;
     /* min-height: 100%; */
     flex: auto; 
+    position: relative;
+
 }
 
 .side-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 #logo-container {

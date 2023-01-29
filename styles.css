@@ -1,12 +1,18 @@
 @font-face {
     font-family: "Norse-Bold";
-    src: url('Norse-Bold.otf') format("opentype");
-  }
+    src: url("fonts/norse-bold-webfont.woff2") format("woff2"), url("fonts/norse-bold-webfont.woff")
+        format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
 
 body, html {
     height: 100%;
     width: 100%;
     display: flex;
+    margin: 0;
+    padding: 0;
+    font-family:'Roboto', 'Segoe UI', 'Lucida Sans';
 }
 
 .background {
@@ -15,8 +21,8 @@ body, html {
     background-repeat: no-repeat;
     background-position: left top;
     height: 100%;
-    width: 500px;
     background-size: cover;
+    flex: 1 1 550px;
 }
 
 .side-container {
@@ -52,10 +58,61 @@ body, html {
     align-self: center;
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 15px;
+    font-size: .9rem;
 }
 
 main {
     background-color: rgb(242, 242, 242);
-    max-width: 100%;
-    flex: 1 0 auto;
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+#credit a:link, #credit a:visited {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.main-container {
+    padding: 0px 50px;
+    max-width: 65%;
+    display: flex;
+}
+
+#description {
+    flex: 1;
+    display: flex;
+
+}
+
+#description-content {
+    display: inline-block;
+    align-self: flex-end;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#form {
+    background-color: rgb(255, 255, 255);
+    min-height: 30%;
+    flex: 1;
+}
+
+#login {
+    flex: 1;
+    padding-top: 30px;
+}
+
+#login a:link, #login a:visited {
+    color: rgb(89, 109, 72);
+    text-decoration: none;
+}
+
+#login a:hover {
+    text-decoration: underline;
+}
+
+#form {
+    box-shadow: 0px 15px 1px -15px rgb(165, 165, 165);   
+
 }

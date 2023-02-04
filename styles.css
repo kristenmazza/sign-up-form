@@ -175,6 +175,11 @@ input:invalid {
     box-shadow: 0px 2px 4px rgb(199, 199, 199);
 }
 
+#result {
+    color:rgb(255, 116, 116);
+    font-size: .7rem;
+}
+
 button[type="submit"] {
     background-color: rgb(89, 109, 72);
     padding: 10px 30px;

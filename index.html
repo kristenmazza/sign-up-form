@@ -50,17 +50,18 @@
                             </div>
                             <div class="input-group">
                                 <label for="phone">PHONE NUMBER</label>
-                                <input type="tel" id="phone" name="phone">
+                                <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="\d{3}[\-]\d{3}[\-]\d{4}" oninvalid="this.setCustomValidity('Please enter valid phone number in the format 123-456-7890')"/>  
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-group">
                                 <label for="password">PASSWORD</label>
-                                <input type="password" id="password" name="password"/>                            
+                                <input type="password" id="password" name="password" class="error"/>
+                                <span id="result"></span>                            
                             </div>
                             <div class="input-group">
                                 <label for="confirm-password">CONFIRM PASSWORD</label>
-                                <input type="password" id="confirm-password" name="confirm-password">
+                                <input type="password" id="confirm-password" name="confirm-password" class="error">
                             </div>
                         </div>
                     </div>
@@ -78,5 +79,7 @@
             </div>
         </div>
     </main>
+    <script src="script.js"></script>
+
 </body>
 </html>

@@ -3,7 +3,15 @@ let pass2 = document.querySelector("#confirm-password");
 let result = document.querySelector("#result");
 
 function checkPassword(){
-    result.innerText = pass1.value == pass2.value ? "" : "* Passwords do not match";
+    if (pass1.value === pass2.value) {
+        result.innerText = "";
+        pass1.classList.remove("error");
+        pass2.classList.remove("error");
+    } else {
+        result.innerText = "* Passwords do not match";
+        pass1.classList.add("error");
+        pass2.classList.add("error");
+    }
 }
 
 pass1.addEventListener('keyup', () => {
